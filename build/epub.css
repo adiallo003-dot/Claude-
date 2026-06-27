@@ -1,0 +1,54 @@
+/* Beyond Simandou — EPUB stylesheet */
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.5;
+  margin: 5%;
+  text-align: justify;
+}
+
+h1, h2, h3, h4 {
+  font-family: Georgia, serif;
+  line-height: 1.2;
+  text-align: left;
+  page-break-after: avoid;
+}
+
+h1 {                 /* Part / chapter openers */
+  font-size: 1.6em;
+  margin-top: 2em;
+  page-break-before: always;
+}
+
+h2 { font-size: 1.25em; margin-top: 1.6em; }
+h3 { font-size: 1.1em;  margin-top: 1.3em; }
+
+p { margin: 0 0 0.8em 0; text-indent: 1.2em; }
+h1 + p, h2 + p, h3 + p, blockquote p:first-child { text-indent: 0; }
+
+/* Callout boxes: National Rules, Core Doctrine, Governing Questions */
+blockquote {
+  margin: 1.4em 1.2em;
+  padding: 0.6em 1em;
+  border-left: 3px solid #555;
+  background: #f4f4f4;
+  font-style: normal;
+  text-align: left;
+}
+blockquote p { text-indent: 0; }
+blockquote strong { display: inline-block; margin-bottom: 0.3em; }
+
+ul, ol { margin: 0.6em 0 1em 1.4em; }
+li { margin-bottom: 0.4em; text-align: left; }
+
+/* Front/back matter special pages */
+.half-title, .title-page, .dedication, .epigraph, .copyright-page, .centered {
+  text-align: center;
+}
+.dedication, .epigraph {
+  margin-top: 25%;
+  font-style: italic;
+}
+.copyright-page { text-align: left; font-size: 0.9em; }
+
+hr { border: none; border-top: 1px solid #ccc; margin: 1.5em 20%; }
