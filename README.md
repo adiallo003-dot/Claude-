@@ -5,17 +5,22 @@ by **Abdourahamane Diallo**
 
 This repository contains the publication-ready edition of the manuscript, produced from the author's final text. The author's arguments, examples, statistics, and structure are preserved; the work here is professional editing and book production only — organization, front/back matter, copyediting, standardization, and formatting for multiple publishing channels.
 
+## Two editions
+
+- **Full edition** — the complete manuscript, including the prescriptive material (allocations, the Resource Constitution checklist, named institutions, the regional geography, and the four corridors).
+- **Doctrine edition** — a principles-only edition. The plan-like passages are removed so the book states what the state must *become*, not what a government should *build*. Nothing was added except minor connective phrases; every change is logged in `editorial/doctrine-edition-changes.md`.
+
 ## Repository layout
 
 ```
 manuscript/
-  Beyond-Simandou.md          ← MASTER manuscript (single source of truth)
+  Beyond-Simandou.md                   ← MASTER, full edition (source of truth)
+  Beyond-Simandou-Doctrine-Edition.md  ← principles-only edition
 dist/
-  Beyond-Simandou.epub        ← ebook (Kindle / Apple / Kobo / Google)
-  Beyond-Simandou.docx        ← Word (editing + KDP-compatible)
-  Beyond-Simandou.pdf         ← print interior (6×9 paperback)
+  Beyond-Simandou.{epub,docx,pdf}                   ← full edition
+  Beyond-Simandou-Doctrine-Edition.{epub,docx,pdf}  ← doctrine edition
 build/
-  build.sh                    ← regenerates all formats from the master
+  build.sh                    ← regenerates BOTH editions in all formats
   epub.css                    ← ebook styling
   print.css                   ← paperback interior styling
 production/
@@ -23,8 +28,9 @@ production/
   02-EPUB-ebook.md            ← ebook / Kindle conversion + validation
   03-audiobook.md             ← audiobook / ACX preparation + pronunciation
 editorial/
-  editorial-report.md         ← every editorial decision, documented
+  editorial-report.md           ← every editorial decision, documented
   citations-and-verification.md ← all figures/claims flagged for sourcing
+  doctrine-edition-changes.md   ← exact record of the doctrine-edition cuts
 ```
 
 ## How to edit and rebuild
